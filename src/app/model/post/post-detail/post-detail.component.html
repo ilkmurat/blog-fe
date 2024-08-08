@@ -1,0 +1,20 @@
+<router-outlet>
+  <div *ngIf="post$ | async as post">
+    <div class="jumbotron">
+      <p [innerHTML]="post.post"></p>
+      <br>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-dark" (click)="goBack()"> < Back</button>
+
+  <app-comment></app-comment>
+
+  <div *ngFor="let post of commentList">
+    <div class="jumbotron">
+      {{post.comment}}
+    </div>
+  </div>
+
+
+</router-outlet>

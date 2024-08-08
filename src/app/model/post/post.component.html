@@ -1,0 +1,13 @@
+<router-outlet>
+  <div *ngFor="let post of postList">
+    <div class="jumbotron">
+      {{post.post}}
+      <a [routerLink]="['/posts', post.postId]" >click for continue</a>
+    </div>
+  </div>
+</router-outlet>
+
+
+
+
+
